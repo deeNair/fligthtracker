@@ -6,18 +6,18 @@ const {flights} = props;
 console.log(flights);
     
 return(
-<div>
-<h1>All Flights</h1>
-<h2><a href={`/flights/new`}> Add Flights</a></h2>
+<div style={{backgroundColor:'#F0F0F0',color:'black' }}>
+<h1 style={{backgroundColor:'#3C486B',color:'black',padding:'50px'}}>All Flights</h1>
+<h2 ><a href={`/flights/new`}> Add Flights</a></h2>
 <ul>
     {
       flights.map((flight,i)=>{
         return(
 
             <li key={flight._id}>
-               <h1> Airline:{flight.airline}{' '}</h1> 
-                <h2>Flightno:{flight.flightNo}</h2>
-                <h3></h3>Departs at:{flight.departs.toString()}
+               <h1> {flight.airline}{' '}Airlines</h1> 
+                <h2>Flight_Number:{flight.flightNo}</h2>
+                <h3>Departure:{flight.departs.toString()}</h3>
             </li>
             //not static methods, works only on instances.
             //{new Date(flight.departs).toLocaleDateString()}
